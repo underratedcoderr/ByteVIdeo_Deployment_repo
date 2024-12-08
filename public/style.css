@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #242324;
+}
+
+.main{
+  height: 100vh;
+  display: flex;
+}
+
+.main .main__left{
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .main__right{
+  flex: 0.2;
+}
+
+.main .main__left .main__videos{
+  flex-grow: 1;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.main .main__left .main__controls{
+  display: flex;
+  background-color: #1C1E20;
+  color: #D2D2D2;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.main .main__left .main__controls .main__controls__block{
+  display: flex;
+}
+
+.main .main__left .main__controls .main__controls__block .main__controls__button{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  min-width: 70px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.main .main__left .main__controls .main__controls__block .main__controls__button:hover{
+  background-color: #343434;
+  border-radius: 5px;
+}
+
+.main .main__left .main__controls .main__controls__block .main__controls__button i {
+  font-size: 20px;
+}
+
+.main .main__left .main__controls .main__controls__block .main__controls__button span {
+  font-size: 14px;
+}
+
+#leave_meeting{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #EB534B;
+  padding: 8px 10px;
+  margin: auto 0;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+#leave_meeting:hover {
+  background-color: #343434;
+  border-radius: 5px;
+  color: rgb(198, 88, 88);
+}
+
+#leave_meeting span {
+  font-size: 14px;
+}
+
+.main__right {
+  display: flex;
+  flex-direction: column;
+  background-color: #242324;
+  border-left: 1px solid #3d3d43;
+  padding: 22px 12px;
+}
+
+.main__header {
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.main__chat_window {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.main__message_container {
+  display: flex;
+}
+
+li{
+  margin-bottom: 12px;
+}
+
+.main__message_container input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  color: #f5f5f5;
+  font-size: 17px;
+  padding: 8px 6px;
+}
+.main__message_container input:focus {
+  outline: none;
+}
+
+.messages {
+  color: white;
+  list-style: none;
+}
+
+#video-grid {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+video {
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+  /* When you set object-fit: center;, it means that the content (image or video) will be resized to fit the container while preserving its aspect ratio, and it will be centered within the container both horizontally and vertically. This ensures that the entire content is visible within the container, and any excess content will be clipped if it exceeds the dimensions of the container. */
+}
+
+
+/* Bottom Controls: */
+.unmute, .stop{
+  color: #CC3B33;
+}
+
+
+/* Chat Section Open/ Close*/
+#chat_section_toggle_button{
+  border-radius: 5px;
+  background-color: #343434;
+}
+
+.main__left{
+  transition: 0.3s ease-in-out;
+}
+
+.main__right{
+  transition: 0.3s ease-in-out;
+}
+
+#chat_section_toggle_button.closed_chat_section{
+  background-color: transparent;
+}
+
+#chat_section_toggle_button.closed_chat_section:hover{
+  background-color: #343434;
+  transition: 0.3s ease-in;
+}
+
+.main__left.closed_chat_section{
+  flex: 1;
+}
+
+.main__right.closed_chat_section {
+  display: none;
+}
